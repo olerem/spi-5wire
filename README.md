@@ -11,10 +11,10 @@ This is working only with kontrollers supporting it by HW or full SW (for exampl
 
 ### Flow control: Request, Ready, Stop ACK.
 Slave using same line to request transfer from Master. And ACK start and end of transfer.
-This implementation was designed to work around low cost reqierements, limitiations of HW SPI controllers and SW latency.
+This implementation was designed to work around low cost reqierements, limitiations of HW SPI controllers and SW latency on both sides.
 
 ### Flow control: Request, Ready, Stop ACK, Pause
-Same as "SW Flow control + Request" and but can pause transfer. This implementation can be done only by HW controller.
+Same as previous but can pause transfer at an time. This implementation can be done only by HW controller or spi-gpio.
 Example can be found in v4-SPI-Interface_AppNote_(UBX-13001919).pdf, Page 14 - 15
 
 ## Patents
