@@ -1,19 +1,19 @@
 # spi-5wire
 There are many 5 wire SPI variants in the wild. Most of them differ in a usage of 5. wire :)
 
-## Variants of 5. wire usage
-### Request only
+## Variants of 5. wire usage on known controllers or docs.
+### Request only, or plain IRQ
 Slave will signal Master that some data are present and should be read read out from slave.
 
-### HW Flow control (Ready signal)
+### Flow control: Ready, Pause
 Slave will suggest SPI Master controller to start or pause transfer if slave internall buffer is note ready.
 This is working only with kontrollers supporting it by HW or full SW (for example spi-gpio) implementation.
 
-### SW Flow control + Request
+### Flow control: Request, Ready, Stop ACK.
 Slave using same line to request transfer from Master. And ACK start and end of transfer.
 This implementation was designed to work around low cost reqierements, limitiations of HW SPI controllers and SW latency.
 
-### Mixed Flow control + Request + (Ready signal)
+### Flow control: Request, Ready, Stop ACK, Pause
 Same as "SW Flow control + Request" and but can pause transfer. This implementation can be done only by HW controller.
 Example can be found in v4-SPI-Interface_AppNote_(UBX-13001919).pdf, Page 14 - 15
 
