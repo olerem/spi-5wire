@@ -13,6 +13,9 @@ This is working only with kontrollers supporting it by HW or full SW (for exampl
 Slave using same line to request transfer from Master. And ACK start and end of transfer.
 This implementation was designed to work around low cost reqierements, limitiations of HW SPI controllers and SW latency.
 
+### SW Flow control + Request + (Ready signal)
+Same as "SW Flow control + Request" and but can pause transfer. This implementation can be done only by HW controller.
+
 ## Patents
 * CN102508812A https://www.google.de/patents/CN102508812A?cl=en&hl=de
 * CN101552733B https://www.google.de/patents/CN101552733B?cl=en&hl=de&dq=spi_mrdy
