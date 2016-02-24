@@ -29,3 +29,6 @@ At some point we can see that all this variants have common parts but different 
 * Slave end of transmission ACK - Slave (if CS_=1) set 5-wire_=1
 * Slave Request - Slave (if CS_=1) set 5-wire_=0, *master should redirect request to spi_device driver*.
 * Master Confirm request and start data transmission - if 5-wire_=0 set CS_=1 and transmit.
+
+## Linux kernel SPI integration
+* Currently exist SPI_READY flag for spi-davinci controller which seems to support "Master Start Request", "Slave DATA Start" and "Slave DATA Stop" or Pause. IMO we need to add SPI_PAUSE flag, since it is most importand difference to other variants.
