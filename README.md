@@ -15,3 +15,4 @@ This implementation was designed to work around low cost reqierements, limitiati
 
 ## Patents
 * CN102508812A https://www.google.de/patents/CN102508812A?cl=en&hl=de
+* CN101552733B https://www.google.de/patents/CN101552733B?cl=en&hl=de&dq=spi_mrdy
