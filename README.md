@@ -32,3 +32,8 @@ At some point we can see that all this variants have common parts but different 
 
 ## Linux kernel SPI integration
 * Currently exist SPI_READY flag for spi-davinci controller which seems to support "Master Start Request", "Slave DATA Start" and "Slave DATA Stop" or Pause. IMO we need to add SPI_PAUSE flag, since it is most importand difference to other variants.
+* flag naming sugestions:
+*  SPI_5W_READY - Master should statr transfer only if 5-wire_=0
+*  SPI_5W_PAUSE - Master should immidiatly pause transfer if 5-wire_=1. (Not all controllers can support it)
+*  SPI_5W_STOP_ACK - Master should wait for 5-wire_=1 after CS_=1
+*  SPI_5W_REQUEST - If CS_=1 (and Master is not about to transfer something) and 5-wire_=0, trigger spi_device call back (if it is registred)
