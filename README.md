@@ -15,6 +15,7 @@ This implementation was designed to work around low cost reqierements, limitiati
 
 ### Mixed Flow control + Request + (Ready signal)
 Same as "SW Flow control + Request" and but can pause transfer. This implementation can be done only by HW controller.
+Example can be found in v4-SPI-Interface_AppNote_(UBX-13001919).pdf, Page 14 - 15
 
 ## Patents
 * CN102508812A https://www.google.de/patents/CN102508812A?cl=en&hl=de
