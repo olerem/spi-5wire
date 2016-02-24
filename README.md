@@ -36,5 +36,5 @@ At some point we can see that all this variants have common parts but different 
 * flag naming sugestions:
 *  SPI_5W_READY - Master should statr transfer only if 5-wire_=0
 *  SPI_5W_PAUSE - Master should immidiatly pause transfer if 5-wire_=1. (Not all controllers can support it)
-*  SPI_5W_STOP_ACK - Master should wait for 5-wire_=1 after CS_=1
+*  SPI_5W_STOP_ACK - Master should wait for 5-wire_=1 after CS_=1. Stop ACK is needed to confirm end of transaction from slave. If slave has some latency issues Master can start new transaction before Slave was able to process it)
 *  SPI_5W_REQUEST - If CS_=1 (and Master is not about to transfer something) and 5-wire_=0, trigger spi_device call back (if it is registred)
